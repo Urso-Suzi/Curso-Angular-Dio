@@ -1,0 +1,41 @@
+body{
+    background-color: #ccc;
+}
+
+.Image {
+    padding: 0px;
+    margin: 10px;
+    width: 100px;
+    height: 110px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.title1, .subtitle, .trititle {
+    color: red;
+}
+
+.trititle {
+    font-size: 18px;
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.post {
+    background-color: #fff;
+    padding: 10px;
+    border: 3px solid black;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+
+.texto {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.image-post {
+    margin-bottom: 15px;
+}
