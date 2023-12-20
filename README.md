@@ -1,0 +1,4 @@
+# Desenvolvendo uma Pokedex com o uso de uma API
+
+Confesso que no início não senti como se fosse algo realmente diferente, mas estou quebrando a cabeça para entender melhor sobre, promises e requisições, também está ajudando muito
+a entender formas diferentes de desenvolver resoluções em JS.
