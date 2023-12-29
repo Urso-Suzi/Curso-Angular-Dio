@@ -29,9 +29,15 @@ class CardNews extends HTMLElement {
         cardLeft.setAttribute("class", "card__left");
         //elementos do cardLeft
         const autor = document.createElement("span");
-        const linkTitle = document.createElement("a");
-        const newsContent = document.createElement("p");
+        autor.textContent = "By " + (this.getAttribute("autor") || "Anonymous")
 
+        const linkTitle = document.createElement("a");
+        linkTitle.textContent = this.getAttribute("title")
+        linkTitle.href = (this.getAttribute("link-url") || "facebook.com")
+
+
+        const newsContent = document.createElement("p");
+        newsContent.textContent = this.getAttribute("content")
 
         cardLeft.appendChild(autor);
         cardLeft.appendChild(linkTitle);
@@ -46,6 +52,7 @@ class CardNews extends HTMLElement {
         cardLeft.setAttribute("class", "card__rigth");
         //elementos do cardRigth
         const newsImage = document.createElement("img");
+        newsImage.src = (this.getAttribute("photo") || "./assets/gato.jpg")
 
 
         cardRigth.appendChild(newsImage);
