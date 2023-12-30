@@ -18,7 +18,7 @@ class CardNews extends HTMLElement {
 
         const shadow = this.attachShadow({mode: "open"});
         shadow.appendChild(this.build());
-        shadow.appendChild(this.style());
+        shadow.appendChild(this.styles());
     }
 
     build() {
@@ -45,13 +45,12 @@ class CardNews extends HTMLElement {
 
 
 
-
-
-
         const cardRigth = document.createElement("div");
-        cardLeft.setAttribute("class", "card__rigth");
+        cardRigth.setAttribute("class", "card__rigth");
         //elementos do cardRigth
         const newsImage = document.createElement("img");
+        newsImage.setAttribute("class", "imagem");
+        
         newsImage.src = (this.getAttribute("photo") || "./assets/gato.jpg")
 
 
@@ -70,9 +69,52 @@ class CardNews extends HTMLElement {
         return componentRoot;
     }
 
-    styles() {}
-    
+    styles() {
+        const style = document.createElement("style");
+        style.textContent = `
+               
+.card {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 6px 8px 25px 3px rgba(0,0,0,0.59);
+    -webkit-box-shadow: 6px 8px 25px 3px rgba(0,0,0,0.59);
+    -moz-box-shadow: 6px 8px 25px 3px rgba(0,0,0,0.59);
+    justify-content: space-between;
+}
 
+.imagem {
+    width: 200px;
+    height: 130px;
+}
+
+
+
+.card__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+}
+
+.card__left > span {
+    font-weight: 400;
+}
+
+.card__left > a{
+    margin-top: 15px;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card__left > p {
+    color: gray;
+} 
+        `
+        return style;
+    }
 }
 
 customElements.define("card-news", CardNews)
