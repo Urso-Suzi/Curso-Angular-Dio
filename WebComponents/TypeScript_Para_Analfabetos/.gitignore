@@ -1,7 +1,0 @@
-# Ignore a pasta de modulos do JS e TS
-node_modules
-
-# Ignore os Packags json 
-
-package-lock.json
-package.json
