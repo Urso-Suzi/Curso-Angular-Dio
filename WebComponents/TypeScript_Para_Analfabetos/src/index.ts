@@ -83,20 +83,67 @@ function CallToPhone(phone: number | string) : number | string{
     return phone;
 }
 
-console.log(CallToPhone(12313245645))
-console.log(CallToPhone("Pedro"))
+// console.log(CallToPhone(12313245645))
+// console.log(CallToPhone("Pedro"))
 
 async function getDatabase(id: number): Promise<string> {
     return "felipe";
 }
 
 
+// interfaces (type vs interface)
+
+// type é mais utilizado para tipar um objeto.
+// interface é mais usado no conceito de classe.
+
+
+type robot1 = {
+    id: number,
+    name: string,
+};
+
+interface robot2 {
+    readonly id: string | number; // declara uma propriedade como somente leitura.
+    name: string;
+    sayHello(): string;
+}
+
+const bot1: robot1 = {
+   id: 1,
+   name: "Megaman" 
+}
+
+const bot2: robot2 = {
+    id: 1,
+    name: "Megaman",
+    sayHello: function (): string {
+        throw new Error("Function not implemented.");
+    }
+}
+ 
+
+console.log(bot1)
+console.log(bot2)
 
 
 
 
+class Pessoa implements robot2 {
+    id: string | number;
+    name: string;
+
+    constructor(id: string | number, name: string ) {
+        this.id = id
+        this.name = name
+    }
+    sayHello(): string {
+        return `Hello my name is ${this.name}`
+    }
+}
 
 
+const p = new Pessoa (224, "Pedro");
+console.log(p.sayHello());
 
 
 
