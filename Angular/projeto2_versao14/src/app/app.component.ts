@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'projeto2_versao14';
+  buttonLabel:string = 'CARRINHO';
+  buttonSecond: string = 'ADICIONAR A FAVORITOS';
 }
