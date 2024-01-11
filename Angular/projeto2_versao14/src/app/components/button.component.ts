@@ -13,5 +13,10 @@ export class Button{
     buttonNumber: number = 1;
     buttonObject = {
         label: 'adicionar um caminho',
+    };
+
+    getAlert() {
+        alert(this.label);
     }
-}
+};
+

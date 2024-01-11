@@ -1,5 +1,13 @@
 <h1>Ola Mundão</h1>
+
+
+<!-- data binding = associação de dados-->
+
+<!-- interpolação-->
 <menu-component></menu-component>
-<my-button [label]="buttonLabel"></my-button>
-<br>
-<my-button label={{buttonSecond}}></my-button>
+<my-button label="noticia"></my-button>
+<my-button label={{buttonLabel}}></my-button>
+
+<!-- property binding = associação de propriedade-->
+<my-button [label]="buttonSecond"></my-button>
+<my-button [label]=" 'Carrinho' "></my-button>
