@@ -18,12 +18,8 @@ const contaBancaria = {
   let montante = 0;
 
     for (mes = 0; mes < periodoMeses; mes ++) {
+        let valor = taxaJurosEmDecimal * investimentoInicial;
         
-        juros = (investimentoInicial * taxaJurosEmDecimal) 
-        conta = investimentoInicial + juros * mes
-        montante += conta;
-        console.log(montante)
-
     }
   
   
