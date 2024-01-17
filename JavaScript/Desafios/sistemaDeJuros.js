@@ -9,12 +9,26 @@ const contaBancaria = {
   };
   
   // TODO: Calcule a taxa de juros mensal em formato decimal (0 a 1) a partir da taxa percentual fornecida:
-  //preciso calcular o valor do juros aumentado, + o valor que será acrecido a cada mês
+    
+    let taxaJurosEmDecimal = contaBancaria.taxaJurosMensal / 100;
+    let periodoMeses = contaBancaria.periodoMeses;
+    let investimentoInicial = contaBancaria.investimentoInicial;
   // TODO: Calcule o montante (valor total após o investimento) usando a fórmula de juros compostos.
+
+  let montante = 0;
+
+    for (mes = 0; mes < periodoMeses; mes ++) {
+        
+        juros = (investimentoInicial * taxaJurosEmDecimal) 
+        conta = investimentoInicial + juros * mes
+        montante += conta;
+        console.log(montante)
+
+    }
   
   
   // É impresso informações sobre o investimento:
-  print("Investimento: " + contaBancaria.investimentoInicial.toFixed(2));
-  print("Juros: " + contaBancaria.taxaJurosMensal);
-  print("Período: " + contaBancaria.periodoMeses);
-  print("Resultado: " + montante.toFixed(2));
+//   print("Investimento: " + contaBancaria.investimentoInicial.toFixed(2));
+//   print("Juros: " + contaBancaria.taxaJurosMensal);
+//   print("Período: " + contaBancaria.periodoMeses);
+//   print("Resultado: " + montante.toFixed(2));
