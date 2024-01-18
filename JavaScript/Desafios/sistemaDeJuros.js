@@ -15,16 +15,17 @@ const contaBancaria = {
     let investimentoInicial = contaBancaria.investimentoInicial;
   // TODO: Calcule o montante (valor total após o investimento) usando a fórmula de juros compostos.
 
-  let montante = 0;
+
+  let montante = investimentoInicial;
 
     for (mes = 0; mes < periodoMeses; mes ++) {
-        let valor = taxaJurosEmDecimal * investimentoInicial;
-        
+        let valor = taxaJurosEmDecimal * montante;
+        montante += valor;
     }
   
   
   // É impresso informações sobre o investimento:
-//   print("Investimento: " + contaBancaria.investimentoInicial.toFixed(2));
-//   print("Juros: " + contaBancaria.taxaJurosMensal);
-//   print("Período: " + contaBancaria.periodoMeses);
-//   print("Resultado: " + montante.toFixed(2));
+  console.log("Investimento: " + investimentoInicial.toFixed(2));
+  console.log("Juros: " + contaBancaria.taxaJurosMensal);
+  console.log("Período: " + periodoMeses);
+  console.log("Resultado: " + montante.toFixed(2));
