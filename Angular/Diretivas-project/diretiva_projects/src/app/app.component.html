@@ -1,2 +1,7 @@
-<app-card *ngIf="isALiveCard"></app-card>
+<app-card *ngIf="isALiveCard; else anotherBlock"></app-card>
+
+<ng-template #anotherBlock>
+    <p>Ola sou um bloco completo</p>
+    <button (click)="trocarCard()">Ola mundo</button>
+</ng-template>
 

@@ -7,5 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'diretiva_projects';
-  isALiveCard = false;
+  isALiveCard = true;
+
+  trocarCard() {
+    if(this.isALiveCard == true) {
+      this.isALiveCard = false
+    } else {this.isALiveCard = true}
+  }
+
 }
